@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Add meta tags for mobile and IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Pay Online</title>
+    <style>
+      .lds-ripple {
+        display: inline-block;
+        position: relative;
+        width: 80px;
+        height: 80px;
+        margin-left: 39%;
+        margin-top: 30%;
+      }
+      .lds-ripple div {
+        position: absolute;
+        border: 4px solid #fdd;
+        opacity: 1;
+        border-radius: 50%;
+        animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+      }
+      .lds-ripple div:nth-child(2) {
+        animation-delay: -0.5s;
+      }
+      @keyframes lds-ripple {
+        0% {
+          top: 36px;
+          left: 36px;
+          width: 0;
+          height: 0;
+          opacity: 1;
+        }
+        100% {
+          top: 0px;
+          left: 0px;
+          width: 72px;
+          height: 72px;
+          opacity: 0;
+        }
+      }
+
+      .body {
+        color:rgb(255, 255, 255); 
+        height: 100%; 
+        background-color:
+      rgb(255, 255, 255); width: 100%; 
+        margin: 0px;
+        padding: 0px;
+      }
+      .header {
+        height: 50px; 
+        background-color: #000000;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <p class="header"
+    >EatsHub Online Payment</p>
+    <div class="lds-ripple">
+      <div></div>
+      <div></div>
+    </div>
+  <!-- Include the yoco JavaScript SDK -->
+  <script src="https://js.yoco.com/sdk/v1/yoco-sdk-web.js"></script>
+  <script src="yocoAPI.js"></script>
+  </body>
+</html>
